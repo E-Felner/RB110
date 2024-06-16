@@ -32,6 +32,24 @@ leap_year?(400) == true
 
 =begin
 
+Given Solution:
+def leap_year?(year)
+  if year % 400 == 0
+    true
+  elsif year % 100 == 0
+    false
+  else
+    year % 4 == 0
+  end
+end
+
+
+or 
+
+
+def leap_year?(year)
+  (year % 400 == 0) || (year % 4 == 0 && year % 100 != 0)
+end
 
 
 =end

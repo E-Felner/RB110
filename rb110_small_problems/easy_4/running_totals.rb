@@ -14,3 +14,13 @@ D:
 - put sum for each index for result array
 
 
+=begin
+
+Given Solution:
+
+def running_total(array)
+  sum = 0
+  array.map { |value| sum += value }
+end
+
+=end
