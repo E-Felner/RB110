@@ -17,14 +17,21 @@ output: integer(sum of ascii values)
 
 =end
 
-def ascii_value
+def ascii_value(string)
   sum_of_values = 0
-  
+  arr_of_chars = string.chars
 
-ascii_value('Four score') == 984
-ascii_value('Launch School') == 1251
-ascii_value('a') == 97
-ascii_value('') == 0
+  arr_of_chars.each do |char|
+    sum_of_values += char.ord
+  end
+
+  sum_of_values
+end
+
+p ascii_value('Four score') == 984
+p ascii_value('Launch School') == 1251
+p ascii_value('a') == 97
+p ascii_value('') == 0
 
 =begin
 
