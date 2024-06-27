@@ -33,3 +33,17 @@ p word_lengths("Supercalifragilisticexpialidocious") ==
   ["Supercalifragilisticexpialidocious 34"]
 
 p word_lengths("") == []
+
+=begin
+
+Given Solution:
+
+def word_lengths(string)
+  words = string.split
+
+  words.map do |word|
+    word + ' ' + word.length.to_s
+  end
+end
+
+=end
