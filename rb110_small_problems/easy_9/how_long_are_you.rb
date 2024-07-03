@@ -46,4 +46,10 @@ def word_lengths(string)
   end
 end
 
+or
+
+def word_lengths(string)
+  string.split.map { |word| "#{word} #{word.lenght}" }
+end
+
 =end

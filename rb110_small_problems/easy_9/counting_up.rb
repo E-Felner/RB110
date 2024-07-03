@@ -14,9 +14,16 @@ output: array of integers
 =end
 
 def sequence(int)
-  (1..int).to_a
+  if int < 0
+    (1..int.abs).to_a.map do |num|
+      -num
+    end
+  else
+    (1..int).to_a
+  end
 end
 
 p sequence(5) == [1, 2, 3, 4, 5]
 p sequence(3) == [1, 2, 3]
 p sequence(1) == [1]
+p sequence(-5) == [-1, -2, -3, -4, -5]
