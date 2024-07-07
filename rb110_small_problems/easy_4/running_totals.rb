@@ -13,6 +13,17 @@ D:
 - take array and add each index to running sum
 - put sum for each index for result array
 
+=end
+
+def running_total(array)
+  sum = 0
+  array.map { |value| sum += value }
+end
+
+p running_total([2, 5, 13]) == [2, 7, 20]
+p running_total([14, 11, 7, 15, 20]) == [14, 25, 32, 47, 67]
+p running_total([3]) == [3]
+p running_total([]) == []
 
 =begin
 
@@ -21,6 +32,15 @@ Given Solution:
 def running_total(array)
   sum = 0
   array.map { |value| sum += value }
+end
+
+or
+
+def running_total(array)
+  sum = 0
+  array.each_with_object([]) do |number, new_array|
+    new_array << sum += number
+  end
 end
 
 =end

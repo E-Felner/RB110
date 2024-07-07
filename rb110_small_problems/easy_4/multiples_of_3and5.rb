@@ -16,7 +16,22 @@ D:
 - if number mod 5 then add to result integer
 - return result integer
 
+=end
 
+def multisum(max_value)
+  sum = 0
+  1.upto(max_value) do |number|
+    if (number % 3 == 0) || (number % 5 == 0)
+      sum += number
+    end
+  end
+  sum
+end
+
+p multisum(3) == 3
+p multisum(5) == 8
+p multisum(10) == 33
+p multisum(1000) == 234168
 
 =begin
 
