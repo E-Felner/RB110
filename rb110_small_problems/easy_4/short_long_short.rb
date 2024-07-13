@@ -41,3 +41,29 @@ def short_long_short(string1, string2)
 end
 
 =end
+
+# short long short
+
+=begin
+Assuming strings of different sizes are given to the method. Determine
+the longest string then concatenates shorter longer shorter.
+
+input: two strings
+output: one string(short long short)
+
+- determine which string is longer
+- add the strings together short, long, then short
+- return the combined string
+=end
+
+def short_long_short(str1, str2)
+  if str1.size > str2.size
+    str2 + str1 + str2
+  else
+    str1 + str2 + str1
+  end
+end
+
+p short_long_short('abc', 'defgh') == "abcdefghabc"
+p short_long_short('abcde', 'fgh') == "fghabcdefgh"
+p short_long_short('', 'xyz') == "xyz"

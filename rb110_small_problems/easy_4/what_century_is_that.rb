@@ -59,3 +59,53 @@ def century_suffix(century)
 end
 
 =end
+
+# what century is that
+
+=begin
+ Write a method that takes one input(integer year) and returns a string
+ that represents the century. Century string should be the century number
+ and end with st, nd, rd, or th as appropriate.
+
+ input: integer(year)
+ output: string(century plus suffix)
+
+rules - new centuries begin with years ending in 01
+
+- take the year and divide by 100 then add 1 to get the century
+- 1st, 2nd, 3rd but 11th 12th 13th
+- century is year divided by 100 plus 1
+- century modulo 10 to see last digit
+    if 11, 12, 13 then th
+    else 1st, 2nd, 3rd
+    else th
+- return the string of integer and suffix
+
+=end
+
+def century(year)
+  century = (year / 100 + 1)
+  century -= 1 if year % 100 == 0
+
+  if ['11', '12', '13'].include?(century.to_s[-2..-1])
+    then century.to_s + 'th'
+  elsif century % 10 == 1
+    then century.to_s + 'st'
+  elsif century % 10 == 2
+    then century.to_s + 'nd'
+  elsif century % 10 == 3
+    then century.to_s + 'rd'
+  else
+    century.to_s + 'th'
+  end
+end
+
+p century(2000) == '20th'
+p century(2001) == '21st'
+p century(1965) == '20th'
+p century(256) == '3rd'
+p century(5) == '1st'
+p century(10103) == '102nd'
+p century(1052) == '11th'
+p century(1127) == '12th'
+p century(11201) == '113th'
