@@ -44,3 +44,22 @@ def running_total(array)
 end
 
 =end
+
+# running totals
+
+=begin
+write a method that takes an array of numbers, returns an array with
+the same number of elements and each element is a running total of the 
+original array.
+
+input: array
+output: array(with running totals)
+
+=end
+
+# def running_totals(array)
+#   sum = 0
+#   array.map do |value|
+#     sum += value
+#   end
+# end
