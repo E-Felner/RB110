@@ -39,3 +39,35 @@ def swap(words)
 end
 
 =end
+
+# letter swap
+
+=begin
+Given a string of words separated by spaces, write a method that tahkes this
+string and returns a string with the first and last letter of every word
+swapped.
+
+assume every word contains least one letter, and string contains least one
+word. Also, assume each string contains nothing but words and spaces.
+
+input: string
+output: string(letters swapped)
+
+- split the strings into words array
+- iterate over and change the letters
+  - swap first and last letter of each word
+- join the words back into single string
+
+=end
+
+def swap(string)
+  words_array = string.split
+  words_array.map do |word|
+    word[0], word[-1] = word[-1], word[0]
+  end
+  words_array.join(' ')
+end
+
+p swap('Oh what a wonderful day it is') == 'hO thaw a londerfuw yad ti si'
+p swap('Abcde') == 'ebcdA'
+p swap('a') == 'a'

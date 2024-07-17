@@ -33,3 +33,28 @@ def remove_vowels(strings)
 end
 
 =end
+
+# delete vowels
+
+=begin
+Write a method that takes an array of strings, returns an array of same
+string values with vowels removed
+
+input: array of strings
+output: array of strings minus vowels
+
+- iterate through the array
+  - delete vowels
+- return string minus vowels
+
+=end
+
+def remove_vowels(array_of_strings)
+  array_of_strings.map do |string|
+    string.delete("AEIOUaeiou")
+  end
+end
+
+p remove_vowels(%w(abcdefghijklmnopqrstuvwxyz)) == %w(bcdfghjklmnpqrstvwxyz)
+p remove_vowels(%w(green YELLOW black white)) == %w(grn YLLW blck wht)
+p remove_vowels(%w(ABC AEIOU XYZ)) == ['BC', '', 'XYZ']

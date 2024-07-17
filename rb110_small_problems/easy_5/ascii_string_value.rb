@@ -43,3 +43,34 @@ def ascii_value(string)
 end
 
 =end
+
+# ascii string value
+
+=begin
+Write a method that find the ascii values of the characters in a string and
+adds the sum of the values for every character in the string.
+  
+input: string
+output: string(sum of ascii values)
+
+- split the string into characters
+- iterate through the new array of characters
+  - find the value of the character
+  - add the value to the sum
+- return the sum
+
+=end
+
+def ascii_value(string)
+  character_array = string.chars
+  sum = 0
+  character_array.each do |character|
+    sum += character.ord
+  end
+  sum
+end
+
+p ascii_value('Four score') == 984
+p ascii_value('Launch School') == 1251
+p ascii_value('a') == 97
+p ascii_value('') == 0
