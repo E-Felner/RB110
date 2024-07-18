@@ -34,3 +34,33 @@ end
 p word_cap('four score and seven') == 'Four Score And Seven'
 p word_cap('the javaScript language') == 'The Javascript Language'
 p word_cap('this is a "quoted" word') == 'This Is A "quoted" Word'
+
+# capitalize words
+
+=begin
+write a method that takes a single string and returns a new string that contains the
+original value with each word capitalized
+
+rules: assume words are any sequence of non-blank characters
+
+input: string
+output: new string(capitalized)
+
+- split the string into words array
+- downcase then capitalize each word/element
+- join the array back into a string
+
+=end
+
+def word_cap(string)
+  word_array = string.split
+  word_array.map! do |word|
+    word.capitalize
+  end
+
+  word_array.join(' ')
+end
+
+p word_cap('four score and seven') == 'Four Score And Seven'
+p word_cap('the javaScript language') == 'The Javascript Language'
+p word_cap('this is a "quoted" word') == 'This Is A "quoted" Word'
