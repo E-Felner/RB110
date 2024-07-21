@@ -29,3 +29,24 @@ end
 
 p greetings(['John', 'Q', 'Doe'], { title: 'Master', occupation: 'Plumber' })
 # => "Hello, John Q Doe! Nice to have a Master Plumber around."
+
+# welcome stranger
+
+=begin
+write a method that takes two arguments, an array and a hash. The array will contain
+2 or more elements when combined with spaces will produce a person's name. The hash 
+will contain 2 keys. Your method should return a greeting using the person's full
+name and person's title and occupation.
+
+input: array, hash
+output: string(greeting)
+
+concatenate the joined array by spaces and the hash values into string
+
+=end
+
+def greetings(array, hash)
+  "Hello, #{array.join(' ')}! Nice to have a #{hash[:title]} #{hash[:occupation]} around."
+end
+
+p greetings(['John', 'Q', 'Doe'], { title: 'Master', occupation: 'Plumber' }) == "Hello, John Q Doe! Nice to have a Master Plumber around."
