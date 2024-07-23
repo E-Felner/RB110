@@ -1,6 +1,18 @@
 # convert a number to a string
 
 =begin
+Write a method that takes a positive integer or zero and converts to a string
+
+input: integer
+output: string
+
+- set a constant digits array with string integers at each index
+- set an empty result string
+- loop through the integer
+  - get the mod 10 of the integer for the last digit
+  - add the digit from the digits array to the front of the result string
+  - stop loop when number equal to 0
+- return the result
 
 Given Solution:
 

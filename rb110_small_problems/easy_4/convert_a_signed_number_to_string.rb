@@ -1,6 +1,7 @@
 # convert a signed number to a string
 
 =begin
+write a method that takes an integer, and converts it to string representation
 
 Given Solution:
 
