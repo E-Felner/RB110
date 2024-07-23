@@ -1,5 +1,16 @@
 # after midnight part 1
 
+=begin
+write a method that takes a time using this minute-based format and returns the time
+of day in 24 hour format(hh:mm).
+
+rules: method should work with any integer input
+If the number of minutes is positive, the time is after midnight
+If the number of minutes is negative, the time is before midnight
+
+input: integer(minutes)
+output: string(hh:mm)
+
 
 time_of_day(0) == "00:00"
 time_of_day(-3) == "23:57"
