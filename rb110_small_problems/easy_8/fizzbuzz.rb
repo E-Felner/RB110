@@ -1,6 +1,24 @@
 # fizzbuzz
 
 =begin
+write a method that takes two arguments; first is starting number, second is ending
+number. print out all numbers from the start to end except if the number is 
+- divisible by 3 print "Fizz"
+- divisible by 5 print "Buzz"
+- divisible by both "FizzBuzz"
+
+input: two integers
+output: print integers and strings
+
+- set an empty array to the result variable
+- iterate from the starting number(first argument) to end number(second argument)
+  - add the result from fizzbuzz value method called on number(element)
+    - def fizzbuzz value to be a case statement
+      - when number mod 3 is zero and number mod 5 is zero return 'FizzBuzz'
+      - when number mod 5 is zero return 'Buzz'
+      - when number mod 3 is zero return 'Fizz'
+      - else return the number
+- join the array by ', ' and print
 
 Given Solution:
 
