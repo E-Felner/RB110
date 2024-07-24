@@ -1,8 +1,5 @@
 # sum of digits
 
-def sum(number)
-  sum = 0
-  
 
 puts sum(23) == 5
 puts sum(496) == 19
