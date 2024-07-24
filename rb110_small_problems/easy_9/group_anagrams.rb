@@ -1,7 +1,14 @@
 # group anagrams
 
 =begin
+write a program that prints out groups of words that are anagrams.
 
+rules: anagram are words that have same exact letters but different order
+
+input: array of strings
+output: arrays
+
+- 
 Given Solution:
 
 result = {}

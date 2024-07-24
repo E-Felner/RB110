@@ -1,6 +1,18 @@
 # grocery list
 
 =begin
+write a method that takes an array(grocery list) of fruits with quantities and convert
+it to an array of the correct number of each fruit.
+
+input: array of arrays
+output: array
+
+- set an empty array to result
+- iterate through the array
+  - set fruit variable to the first element
+  - set quantity variable to the second element
+  - quantity times add fruit to the result
+- return the result
 
 Given Solution:
 

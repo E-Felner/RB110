@@ -35,6 +35,17 @@ p word_lengths("Supercalifragilisticexpialidocious") ==
 p word_lengths("") == []
 
 =begin
+write a method that takes a string and returns an array that contains every word 
+from the string, with a space and the word lenght added to it.
+
+input: string
+output: array
+
+rules: if the string is empty, return an empty array
+
+- split the string into a words array
+- transform the array
+  - add the space and word length to the string elements/words
 
 Given Solution:
 
@@ -49,7 +60,7 @@ end
 or
 
 def word_lengths(string)
-  string.split.map { |word| "#{word} #{word.lenght}" }
+  string.split.map { |word| "#{word} #{word.length}" }
 end
 
 =end
