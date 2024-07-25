@@ -1,6 +1,20 @@
 # multiply all pairs
 
 =begin
+write a method that takes 2 array arguments of integers and returns a new array that
+contains the product of every pair of numbers that can be formed between the elements
+of the two arrays.
+
+rules: result sorted by increasing value
+
+input: two arrays of integers
+output: array of integers
+
+- set an empty array to products
+- iterate through the first array
+  - iterate through the second array
+    - append the product of the element in array 1 times the element in array 2
+- return the products array sorted
 
 Given Solution:
 

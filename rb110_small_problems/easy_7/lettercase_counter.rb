@@ -1,6 +1,20 @@
 # lettercase counter
 
 =begin
+write a method that takes a string and returns a hash with 3 entries; number of characters
+in the string that are lowercase letters, uppercase letters, and neither.
+
+input: string
+output: hash
+
+- create an uppercase characters array
+- create a lowercase characters array
+- set a counts variable to an empty hash with the 3 keys set to zero
+- iterate through the string after separating it into a characters array
+  - if uppercase includes the char/element add a count to the uppercase value
+  - if lowercase includes the char/element add a count to the lowercase value
+  - else add count to neither value
+- return the counts hash
 
 Given Solution:
 
