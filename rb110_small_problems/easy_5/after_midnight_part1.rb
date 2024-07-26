@@ -11,7 +11,6 @@ If the number of minutes is negative, the time is before midnight
 input: integer(minutes)
 output: string(hh:mm)
 
-
 time_of_day(0) == "00:00"
 time_of_day(-3) == "23:57"
 time_of_day(35) == "00:35"
