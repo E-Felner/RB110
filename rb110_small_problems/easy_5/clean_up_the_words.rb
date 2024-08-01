@@ -40,3 +40,43 @@ def cleanup(text)
 end
 
 =end
+
+# clean up the words
+
+=begin
+given a string consisting of lowercased words and assortment of non-alphabetic characters,
+write a method that returns that string with all non-alphabetic replaced by spaces.
+
+rules: if one or more non-alphabetic character is in a row, only have one space, never
+  consecutive spaces
+
+input: string
+output: string
+in between: array
+
+- set a constant to an alphabet array
+- set a clean characters array
+- split the text into characters and iterate through each of them
+  - if the alphabet array includes the character, add it to the clean array
+  - else add a space to clean array unless clean array last is a space
+- return the clean array joined into a string
+
+=end
+
+ALPHABET = ('a'..'z').to_a
+
+def cleanup(text)
+  clean_chars = []
+
+  text.chars.each do |char|
+    if ALPHABET.include?(char)
+      clean_chars << char
+    else
+      clean_chars << ' ' unless clean_chars.last == ' '
+    end
+  end
+
+  clean_chars.join
+end
+
+p cleanup("---what's my +*& line?") == ' what s my line '
